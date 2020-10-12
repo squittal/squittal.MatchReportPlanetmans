@@ -48,14 +48,14 @@ namespace squittal.MatchReportPlanetmans
 
             services.AddSingleton<IWorldService, WorldService>();
 
-            services.AddTransient<IScrimMatchReportDataService, ScrimMatchReportDataService>();
+            services.AddSingleton<IScrimMatchReportDataService, ScrimMatchReportDataService>();
 
             services.AddSingleton<IDbSeeder, DbSeeder>();
 
             services.AddSingleton<IApplicationDataLoader, ApplicationDataLoader>();
             services.AddHostedService<ApplicationDataLoaderHostedService>();
 
-            services.AddTransient<ISqlScriptRunner, SqlScriptRunner>();
+            services.AddSingleton<ISqlScriptRunner, SqlScriptRunner>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
