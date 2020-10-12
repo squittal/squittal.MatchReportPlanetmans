@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace squittal.ScrimPlanetmans.Data
+namespace squittal.MatchReportPlanetmans.Data
 {
     public interface IDbSeeder
     {

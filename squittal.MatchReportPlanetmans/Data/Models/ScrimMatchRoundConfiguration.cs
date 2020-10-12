@@ -1,7 +1,7 @@
-﻿using squittal.ScrimPlanetmans.Models.Planetside;
+﻿using squittal.MatchReportPlanetmans.Models.Planetside;
 using System.ComponentModel.DataAnnotations;
 
-namespace squittal.ScrimPlanetmans.Data.Models
+namespace squittal.MatchReportPlanetmans.Data.Models
 {
     public class ScrimMatchRoundConfiguration
     {

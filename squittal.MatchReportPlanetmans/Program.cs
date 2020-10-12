@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using squittal.ScrimPlanetmans.Data;
+using squittal.MatchReportPlanetmans.Data;
 
-namespace squittal.ScrimPlanetmans.App
+namespace squittal.MatchReportPlanetmans
 {
     public class Program
     {

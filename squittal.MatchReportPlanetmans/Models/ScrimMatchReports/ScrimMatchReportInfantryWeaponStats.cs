@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace squittal.ScrimPlanetmans.Models.ScrimMatchReports
+namespace squittal.MatchReportPlanetmans.Models.ScrimMatchReports
 {
     public class ScrimMatchReportInfantryWeaponStats
     {

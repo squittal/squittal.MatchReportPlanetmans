@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace squittal.ScrimPlanetmans.ScrimMatch.Models
+namespace squittal.MatchReportPlanetmans.ScrimMatch.Models
 {
     public class Ruleset
     {

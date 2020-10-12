@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using squittal.ScrimPlanetmans.Data;
+using squittal.MatchReportPlanetmans.Data;
 
-namespace squittal.ScrimPlanetmans.App.Migrations
+namespace squittal.MatchReportPlanetmans.Migrations
 {
     [DbContext(typeof(PlanetmansDbContext))]
     partial class PlanetmansDbContextModelSnapshot : ModelSnapshot

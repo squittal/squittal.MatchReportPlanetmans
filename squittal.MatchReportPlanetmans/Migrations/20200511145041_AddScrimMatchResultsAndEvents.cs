@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace squittal.ScrimPlanetmans.App.Migrations
+namespace squittal.MatchReportPlanetmans.Migrations
 {
     public partial class AddScrimMatchResultsAndEvents : Migration
     {

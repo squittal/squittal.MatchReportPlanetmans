@@ -3,7 +3,7 @@ using System.IO;
 using Microsoft.SqlServer.Management.Smo;
 using Microsoft.Extensions.Logging;
 
-namespace squittal.ScrimPlanetmans.Services
+namespace squittal.MatchReportPlanetmans.Services
 {
     public class SqlScriptRunner : ISqlScriptRunner
     {

@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace squittal.ScrimPlanetmans.Data
+namespace squittal.MatchReportPlanetmans.Data
 {
     public static class DbInitializer
     {

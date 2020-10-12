@@ -4,18 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using squittal.ScrimPlanetmans.CensusServices;
-//using squittal.ScrimPlanetmans.CensusStream;
-using squittal.ScrimPlanetmans.Data;
-//using squittal.ScrimPlanetmans.ScrimMatch;
-using squittal.ScrimPlanetmans.Services;
-using squittal.ScrimPlanetmans.Services.Planetside;
-//using squittal.ScrimPlanetmans.Services.Rulesets;
-//using squittal.ScrimPlanetmans.Services.ScrimMatch;
-using squittal.ScrimPlanetmans.Services.ScrimMatchReports;
+using squittal.MatchReportPlanetmans.Data;
+using squittal.MatchReportPlanetmans.Services;
+using squittal.MatchReportPlanetmans.Services.Planetside;
+using squittal.MatchReportPlanetmans.Services.ScrimMatchReports;
 using System;
 
-namespace squittal.ScrimPlanetmans.App
+namespace squittal.MatchReportPlanetmans
 {
     public class Startup
     {
@@ -45,41 +40,13 @@ namespace squittal.ScrimPlanetmans.App
                                                 errorNumbersToAdd: null);
                                         }));
 
-            services.AddCensusServices(options =>
-                options.CensusServiceId = Environment.GetEnvironmentVariable("DaybreakGamesServiceKey", EnvironmentVariableTarget.User));
-            services.AddCensusHelpers();
-
             services.AddSingleton<IDbContextHelper, DbContextHelper>();
 
-            //services.AddSingleton<IScrimMessageBroadcastService, ScrimMessageBroadcastService>();
-
-            services.AddTransient<IFactionService, FactionService>();
             services.AddSingleton<IZoneService, ZoneService>();
 
-            services.AddSingleton<IItemService, ItemService>();
-            services.AddSingleton<IItemCategoryService, ItemCategoryService>();
             services.AddSingleton<IFacilityService, FacilityService>();
-            services.AddTransient<IFacilityTypeService, FacilityTypeService>();
-            //services.AddTransient<IVehicleService, VehicleService>();
-
-            //services.AddTransient<IVehicleTypeService, VehicleTypeService>();
-            //services.AddTransient<IDeathEventTypeService, DeathEventTypeService>();
-
-            //services.AddSingleton<IScrimRulesetManager, ScrimRulesetManager>();
-
-            //services.AddSingleton<IScrimMatchDataService, ScrimMatchDataService>();
 
             services.AddSingleton<IWorldService, WorldService>();
-            //services.AddSingleton<ICharacterService, CharacterService>();
-            //services.AddSingleton<IOutfitService, OutfitService>();
-            services.AddSingleton<IProfileService, ProfileService>();
-            services.AddTransient<ILoadoutService, LoadoutService>();
-
-            //services.AddSingleton<IScrimTeamsManager, ScrimTeamsManager>();
-            //services.AddSingleton<IScrimPlayersService, ScrimPlayersService>();
-
-            //services.AddSingleton<IConstructedTeamService, ConstructedTeamService>();
-            //services.AddSingleton<IRulesetDataService, RulesetDataService>();
 
             services.AddTransient<IScrimMatchReportDataService, ScrimMatchReportDataService>();
 

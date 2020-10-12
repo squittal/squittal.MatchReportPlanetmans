@@ -1,15 +1,14 @@
 ﻿using Microsoft.Extensions.Logging;
-using squittal.ScrimPlanetmans.Services.Planetside;
+using squittal.MatchReportPlanetmans.Services.Planetside;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace squittal.ScrimPlanetmans.Data
+namespace squittal.MatchReportPlanetmans.Data
 {
     public class ApplicationDataLoader : IApplicationDataLoader
     {
-        private readonly IItemCategoryService _itemCategoryService;
         private readonly IFacilityService _facilityService;
         private readonly IWorldService _worldService;
         private readonly IZoneService _zoneService;
@@ -18,14 +17,12 @@ namespace squittal.ScrimPlanetmans.Data
 
 
         public ApplicationDataLoader(
-            IItemCategoryService itemCategoryService,
             IFacilityService facilityService,
             IWorldService worldService,
             IZoneService zoneService,
             IDbSeeder dbSeeder,
             ILogger<ApplicationDataLoader> logger)
         {
-            _itemCategoryService = itemCategoryService;
             _facilityService = facilityService;
             _worldService = worldService;
             _zoneService = zoneService;
@@ -42,9 +39,6 @@ namespace squittal.ScrimPlanetmans.Data
                 cancellationToken.ThrowIfCancellationRequested();
 
                 List<Task> TaskList = new List<Task>();
-
-                var weaponCategoriesListTask = _itemCategoryService.SetUpWeaponCategoriesListAsync();
-                TaskList.Add(weaponCategoriesListTask);
 
                 var scrimmableMapRegionsTask = _facilityService.SetUpScrimmableMapRegionsAsync();
                 TaskList.Add(scrimmableMapRegionsTask);

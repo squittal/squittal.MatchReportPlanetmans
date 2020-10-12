@@ -1,4 +1,4 @@
-﻿namespace squittal.ScrimPlanetmans.Models
+﻿namespace squittal.MatchReportPlanetmans.Models
 {
     public enum PlanetsideClass
     {

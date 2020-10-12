@@ -1,6 +1,6 @@
-﻿using static squittal.ScrimPlanetmans.Data.DbContextHelper;
+﻿using static squittal.MatchReportPlanetmans.Data.DbContextHelper;
 
-namespace squittal.ScrimPlanetmans.Data
+namespace squittal.MatchReportPlanetmans.Data
 {
     public interface IDbContextHelper
     {

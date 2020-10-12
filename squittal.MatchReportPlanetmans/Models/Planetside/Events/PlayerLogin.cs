@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace squittal.ScrimPlanetmans.Models.Planetside.Events
+namespace squittal.MatchReportPlanetmans.Models.Planetside.Events
 {
     public class PlayerLogin
     {

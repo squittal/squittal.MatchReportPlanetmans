@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using squittal.ScrimPlanetmans.Data.Models;
+using squittal.MatchReportPlanetmans.Data.Models;
 
-namespace squittal.ScrimPlanetmans.Data.DataConfigurations
+namespace squittal.MatchReportPlanetmans.Data.DataConfigurations
 {
     public class ConstructedTeamFactionPreferenceConfiguration : IEntityTypeConfiguration<ConstructedTeamFactionPreference>
     {

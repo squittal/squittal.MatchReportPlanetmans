@@ -1,8 +1,8 @@
-﻿using squittal.ScrimPlanetmans.Data.Models;
+﻿using squittal.MatchReportPlanetmans.Data.Models;
 using System;
 using System.Collections.Generic;
 
-namespace squittal.ScrimPlanetmans.Models.ScrimMatchReports
+namespace squittal.MatchReportPlanetmans.Models.ScrimMatchReports
 {
     public class ScrimMatchInfo
     {

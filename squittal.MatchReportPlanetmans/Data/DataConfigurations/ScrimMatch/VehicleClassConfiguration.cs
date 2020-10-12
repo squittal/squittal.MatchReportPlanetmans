@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using squittal.ScrimPlanetmans.ScrimMatch.Models;
+using squittal.MatchReportPlanetmans.ScrimMatch.Models;
 
-namespace squittal.ScrimPlanetmans.Data.DataConfigurations
+namespace squittal.MatchReportPlanetmans.Data.DataConfigurations
 {
     public class VehicleClassConfiguration : IEntityTypeConfiguration<VehicleClass>
     {

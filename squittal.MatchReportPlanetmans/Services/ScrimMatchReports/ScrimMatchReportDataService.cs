@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using squittal.ScrimPlanetmans.Data;
-using squittal.ScrimPlanetmans.Models;
-using squittal.ScrimPlanetmans.Models.Forms;
-using squittal.ScrimPlanetmans.Models.ScrimMatchReports;
-using squittal.ScrimPlanetmans.ScrimMatch.Models;
+using squittal.MatchReportPlanetmans.Data;
+using squittal.MatchReportPlanetmans.Models;
+using squittal.MatchReportPlanetmans.Models.Forms;
+using squittal.MatchReportPlanetmans.Models.ScrimMatchReports;
+using squittal.MatchReportPlanetmans.ScrimMatch.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace squittal.ScrimPlanetmans.Services.ScrimMatchReports
+namespace squittal.MatchReportPlanetmans.Services.ScrimMatchReports
 {
     public class ScrimMatchReportDataService : IScrimMatchReportDataService
     {

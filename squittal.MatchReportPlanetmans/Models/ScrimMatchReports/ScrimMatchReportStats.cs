@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace squittal.ScrimPlanetmans.Models.ScrimMatchReports
+namespace squittal.MatchReportPlanetmans.Models.ScrimMatchReports
 {
     public class ScrimMatchReportStats
     {

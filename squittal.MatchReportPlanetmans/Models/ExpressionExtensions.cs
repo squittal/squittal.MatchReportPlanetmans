@@ -3,7 +3,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace squittal.ScrimPlanetmans.Models
+namespace squittal.MatchReportPlanetmans.Models
 {
     public static class ExpressionExtensions
     {

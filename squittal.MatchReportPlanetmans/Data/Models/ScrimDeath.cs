@@ -1,9 +1,9 @@
-﻿using squittal.ScrimPlanetmans.Models.Planetside;
-using squittal.ScrimPlanetmans.ScrimMatch.Models;
+﻿using squittal.MatchReportPlanetmans.Models.Planetside;
+using squittal.MatchReportPlanetmans.ScrimMatch.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace squittal.ScrimPlanetmans.Data.Models
+namespace squittal.MatchReportPlanetmans.Data.Models
 {
     public class ScrimDeath
     {

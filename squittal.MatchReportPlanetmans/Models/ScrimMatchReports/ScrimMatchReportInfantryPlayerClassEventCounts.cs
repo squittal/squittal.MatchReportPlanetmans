@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace squittal.ScrimPlanetmans.Models.ScrimMatchReports
+namespace squittal.MatchReportPlanetmans.Models.ScrimMatchReports
 {
     public class ScrimMatchReportInfantryPlayerClassEventCounts
     {

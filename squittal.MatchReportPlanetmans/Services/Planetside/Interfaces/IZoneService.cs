@@ -1,14 +1,12 @@
-﻿using squittal.ScrimPlanetmans.Models.Planetside;
+﻿using squittal.MatchReportPlanetmans.Models.Planetside;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace squittal.ScrimPlanetmans.Services.Planetside
+namespace squittal.MatchReportPlanetmans.Services.Planetside
 {
-    public interface IZoneService : ILocallyBackedCensusStore
+    public interface IZoneService
     {
         Task<IEnumerable<Zone>> GetAllZones();
-        Task<IEnumerable<Zone>> GetAllZonesAsync();
-        Task<Zone> GetZoneAsync(int zoneId);
         Task SetupZonesMapAsync();
     }
 }

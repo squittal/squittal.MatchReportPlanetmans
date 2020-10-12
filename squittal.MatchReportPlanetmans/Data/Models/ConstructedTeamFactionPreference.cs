@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace squittal.ScrimPlanetmans.Data.Models
+namespace squittal.MatchReportPlanetmans.Data.Models
 {
     public class ConstructedTeamFactionPreference
     {

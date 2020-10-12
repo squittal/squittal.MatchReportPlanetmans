@@ -1,7 +1,7 @@
-﻿using squittal.ScrimPlanetmans.Models.Planetside;
+﻿using squittal.MatchReportPlanetmans.Models.Planetside;
 using System;
 
-namespace squittal.ScrimPlanetmans.ScrimMatch.Models
+namespace squittal.MatchReportPlanetmans.ScrimMatch.Models
 {
     public abstract class ScrimActionEvent
     {

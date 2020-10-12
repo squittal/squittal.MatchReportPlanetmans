@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace squittal.ScrimPlanetmans.Data.DataConfigurations
+namespace squittal.MatchReportPlanetmans.Data.DataConfigurations
 {
     public class ScrimMatchConfiguration : IEntityTypeConfiguration<Models.ScrimMatch>
     {

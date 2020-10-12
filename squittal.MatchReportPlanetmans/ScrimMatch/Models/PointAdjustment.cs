@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace squittal.ScrimPlanetmans.ScrimMatch.Models
+namespace squittal.MatchReportPlanetmans.ScrimMatch.Models
 {
     public class PointAdjustment
     {

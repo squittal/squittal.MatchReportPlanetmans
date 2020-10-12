@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 
-namespace squittal.ScrimPlanetmans.Models.Forms
+namespace squittal.MatchReportPlanetmans.Models.Forms
 {
     public class ScrimMatchReportBrowserSearchFilter
     {

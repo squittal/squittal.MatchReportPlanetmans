@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace squittal.ScrimPlanetmans.Models.Planetside
+namespace squittal.MatchReportPlanetmans.Models.Planetside
 {
     public class Vehicle
     {

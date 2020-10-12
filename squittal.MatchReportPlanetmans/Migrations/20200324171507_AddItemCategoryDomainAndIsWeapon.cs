@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace squittal.ScrimPlanetmans.App.Migrations
+namespace squittal.MatchReportPlanetmans.Migrations
 {
     public partial class AddItemCategoryDomainAndIsWeapon : Migration
     {

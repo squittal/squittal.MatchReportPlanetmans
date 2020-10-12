@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using squittal.ScrimPlanetmans.Models.Planetside;
-using squittal.ScrimPlanetmans.ScrimMatch.Models;
+using squittal.MatchReportPlanetmans.Models.Planetside;
+using squittal.MatchReportPlanetmans.ScrimMatch.Models;
 
-namespace squittal.ScrimPlanetmans.Data.DataConfigurations
+namespace squittal.MatchReportPlanetmans.Data.DataConfigurations
 {
     public class RulesetFacilityRuleConfiguration : IEntityTypeConfiguration<RulesetFacilityRule>
     {

@@ -1,4 +1,4 @@
-﻿namespace squittal.ScrimPlanetmans.ScrimMatch.Models
+﻿namespace squittal.MatchReportPlanetmans.ScrimMatch.Models
 {
     public enum ScrimActionTypeDomain
     {

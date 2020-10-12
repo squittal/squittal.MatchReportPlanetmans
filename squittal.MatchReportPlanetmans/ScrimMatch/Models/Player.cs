@@ -1,8 +1,8 @@
-﻿using squittal.ScrimPlanetmans.Models.Planetside;
-using squittal.ScrimPlanetmans.Services.Planetside;
+﻿using squittal.MatchReportPlanetmans.Models.Planetside;
+using squittal.MatchReportPlanetmans.Services.Planetside;
 using System.Text.RegularExpressions;
 
-namespace squittal.ScrimPlanetmans.ScrimMatch.Models
+namespace squittal.MatchReportPlanetmans.ScrimMatch.Models
 {
     public class Player : IEquitable<Player>
     {
