@@ -78,9 +78,9 @@ namespace squittal.ScrimPlanetmans.App
             services.AddSingleton<IScrimTeamsManager, ScrimTeamsManager>();
             services.AddSingleton<IScrimPlayersService, ScrimPlayersService>();
 
-            services.AddSingleton<IStatefulTimer, StatefulTimer>();
-            services.AddSingleton<IScrimMatchEngine, ScrimMatchEngine>();
-            services.AddSingleton<IScrimMatchScorer, ScrimMatchScorer>();
+            //services.AddSingleton<IStatefulTimer, StatefulTimer>();
+            //services.AddSingleton<IScrimMatchEngine, ScrimMatchEngine>();
+            //services.AddSingleton<IScrimMatchScorer, ScrimMatchScorer>();
 
             services.AddSingleton<IConstructedTeamService, ConstructedTeamService>();
             services.AddSingleton<IRulesetDataService, RulesetDataService>();
@@ -90,19 +90,19 @@ namespace squittal.ScrimPlanetmans.App
             services.AddSingleton<IDbSeeder, DbSeeder>();
 
 
-            services.AddTransient<IStreamClient, StreamClient>();
-            services.AddSingleton<IWebsocketEventHandler, WebsocketEventHandler>();
-            services.AddSingleton<IWebsocketMonitor, WebsocketMonitor>();
-            services.AddSingleton<IWebsocketHealthMonitor, WebsocketHealthMonitor>();
+            //services.AddTransient<IStreamClient, StreamClient>();
+            //services.AddSingleton<IWebsocketEventHandler, WebsocketEventHandler>();
+            //services.AddSingleton<IWebsocketMonitor, WebsocketMonitor>();
+            //services.AddSingleton<IWebsocketHealthMonitor, WebsocketHealthMonitor>();
 
-            services.AddHostedService<WebsocketMonitorHostedService>();
+            //services.AddHostedService<WebsocketMonitorHostedService>();
 
             services.AddSingleton<IApplicationDataLoader, ApplicationDataLoader>();
             services.AddHostedService<ApplicationDataLoaderHostedService>();
 
             services.AddTransient<ISqlScriptRunner, SqlScriptRunner>();
 
-            services.AddTransient<DatabaseMaintenanceService>();
+            //services.AddTransient<DatabaseMaintenanceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

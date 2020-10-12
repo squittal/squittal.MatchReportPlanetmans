@@ -11,8 +11,8 @@ namespace squittal.ScrimPlanetmans.Data
     public class ApplicationDataLoader : IApplicationDataLoader
     {
         private readonly IItemCategoryService _itemCategoryService;
-        private readonly IScrimRulesetManager _rulesetManager;
-        private readonly IScrimMatchScorer _matchScorer;
+        //private readonly IScrimRulesetManager _rulesetManager;
+        //private readonly IScrimMatchScorer _matchScorer;
         private readonly IFacilityService _facilityService;
         private readonly IWorldService _worldService;
         private readonly IZoneService _zoneService;
@@ -22,8 +22,8 @@ namespace squittal.ScrimPlanetmans.Data
 
         public ApplicationDataLoader(
             IItemCategoryService itemCategoryService,
-            IScrimRulesetManager rulesetManager,
-            IScrimMatchScorer matchScorer,
+            //IScrimRulesetManager rulesetManager,
+            //IScrimMatchScorer matchScorer,
             IFacilityService facilityService,
             IWorldService worldService,
             IZoneService zoneService,
@@ -31,8 +31,8 @@ namespace squittal.ScrimPlanetmans.Data
             ILogger<ApplicationDataLoader> logger)
         {
             _itemCategoryService = itemCategoryService;
-            _rulesetManager = rulesetManager;
-            _matchScorer = matchScorer;
+            //_rulesetManager = rulesetManager;
+            //_matchScorer = matchScorer;
             _facilityService = facilityService;
             _worldService = worldService;
             _zoneService = zoneService;
@@ -51,8 +51,8 @@ namespace squittal.ScrimPlanetmans.Data
 
                 List<Task> TaskList = new List<Task>();
 
-                var seedDefaultRulesetTask = _rulesetManager.SeedDefaultRuleset();
-                TaskList.Add(seedDefaultRulesetTask);
+                //var seedDefaultRulesetTask = _rulesetManager.SeedDefaultRuleset();
+                //TaskList.Add(seedDefaultRulesetTask);
 
                 var weaponCategoriesListTask = _itemCategoryService.SetUpWeaponCategoriesListAsync();
                 TaskList.Add(weaponCategoriesListTask);
@@ -70,11 +70,11 @@ namespace squittal.ScrimPlanetmans.Data
 
                 cancellationToken.ThrowIfCancellationRequested();
 
-                await _rulesetManager.ActivateDefaultRulesetAsync();
+                //await _rulesetManager.ActivateDefaultRulesetAsync();
 
-                await _rulesetManager.SetUpActiveRulesetAsync();
+                //await _rulesetManager.SetUpActiveRulesetAsync();
 
-                await _matchScorer.SetActiveRulesetAsync();
+                //await _matchScorer.SetActiveRulesetAsync();
             }
             catch (Exception ex)
             {

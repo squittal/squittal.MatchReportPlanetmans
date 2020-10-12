@@ -1,4 +1,7 @@
-﻿@page "/Reports/{i_scrimMatchId}"
+﻿@page "/MatchReport/{i_scrimMatchId}"
+@page "/MatchReport/{i_scrimMatchId}/{i_selectedPlayerInput}"
+
+@*@page "/Reports/{i_scrimMatchId}"
 @page "/MatchReport/{i_scrimMatchId}"
 @page "/ReportBrowser/{i_scrimMatchId}"
 @page "/ScrimMatch/{i_scrimMatchId}"
@@ -6,7 +9,7 @@
 @page "/Reports/{i_scrimMatchId}/{i_selectedPlayerInput}"
 @page "/MatchReport/{i_scrimMatchId}/{i_selectedPlayerInput}"
 @page "/ReportBrowser/{i_scrimMatchId}/{i_selectedPlayerInput}"
-@page "/ScrimMatch/{i_scrimMatchId}/{i_selectedPlayerInput}"
+@page "/ScrimMatch/{i_scrimMatchId}/{i_selectedPlayerInput}"*@
 
 @using squittal.ScrimPlanetmans.App.Pages.Shared;
 @using squittal.ScrimPlanetmans.Models;
@@ -188,7 +191,7 @@
                                             </td>
                                             <td style="text-align: left;" title="@player.NameFull [@(player.CharacterId)]">
 
-                                                <NavLink class="nav-link" href=@($"ScrimMatch/{_renderedScrimMatchId}/{player.NameFull}")>
+                                                <NavLink class="nav-link" href=@($"MatchReport/{_renderedScrimMatchId}/{player.NameFull}")>
                                                     <span style="text-overflow: ellipsis; overflow: hidden; max-width: @(player.PrestigeLevel != 0 ? "110px" : "120px"); display: inline-block; vertical-align: bottom;">@player.NameDisplay</span>
                                                     @if (player.PrestigeLevel != 0)
                                                     {
