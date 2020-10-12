@@ -88,7 +88,7 @@ else
                             </td>
                             <td style="color: var(--sq-ps2-primary);text-align: left;" title="@opponentStats.OpponentNameFull [@(opponentStats.OpponentCharacterId)]">
 
-                                <NavLink class="nav-link" href=@($"ScrimMatch/{_renderedScrimMatchId}/{opponentStats.OpponentNameFull}")>
+                                <NavLink class="nav-link" href=@($"MatchReport/{_renderedScrimMatchId}/{opponentStats.OpponentNameFull}")>
                                     <span style="text-overflow: ellipsis; overflow: hidden; max-width: 200px;">@opponentStats.OpponentNameDisplay</span>
                                     @if (opponentStats.OpponentPrestigeLevel != 0)
                                     {
