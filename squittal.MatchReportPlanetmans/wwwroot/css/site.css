@@ -1064,6 +1064,99 @@ table.report-killfeed td {
     vertical-align: top;
 }
 
+/* Report Browser Style */
+
+.report-browser-grid {
+    display: grid;
+    width: 100%;
+    /*grid-auto-columns: 200px;*/
+    /*grid-auto-columns: auto;*/
+    /*grid-auto-rows: 240px;*/
+    grid-gap: 24px;
+    /*grid-auto-flow: row dense;*/
+    grid-template-columns: repeat(auto-fill, 140px);
+    grid-row-gap: 16px;
+}
+
+    .report-browser-grid .grid-element {
+        width: 140px;
+        height: 200px;
+    }
+
+    .report-browser-grid a.grid-element, .report-browser-grid a.grid-element:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+
+        .report-browser-grid .grid-element .map-overlay-text {
+            display: block;
+            position: relative;
+            /*top: -140px;*/
+            top: -159px;
+            padding-left: 8px;
+            padding-top: 4px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            font-weight: 600;
+            width: 140px;
+        }
+
+            .report-browser-grid .grid-element .map-overlay-text.bottom {
+                /*top: -48px;*/
+                top: -26px;
+                padding-left: 0px;
+                padding-right: 8px;
+                padding-top: 0px;
+                text-align: right;
+                font-weight: 400;
+            }
+
+        .report-browser-grid .grid-element .map-overlay-text.unknown {
+            color: var(--sq-black);
+            text-shadow: none;
+        }
+
+
+.ps2-map {
+    display: block;
+    width: 140px;
+    height: 140px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+    .ps2-map.Chac {
+        background-image: url('../images/Maps/Chac_Fusion.png') !important;
+    }
+
+    .ps2-map.Acan {
+        background-image: url('../images/Maps/Acan_Southern.png') !important;
+    }
+
+    .ps2-map.Ghanan {
+        background-image: url('../images/Maps/Ghanan_Southern.png') !important;
+    }
+
+    .ps2-map.Pale {
+        background-image: url('../images/Maps/Pale_Canyon.png') !important;
+    }
+
+    .ps2-map.Peris {
+        background-image: url('../images/Maps/Peris_Eastern.png') !important;
+    }
+
+    .ps2-map.Rashnu {
+        background-image: url('../images/Maps/Rashnu.png') !important;
+    }
+
+    .ps2-map.Xenotech {
+        background-image: url('../images/Maps/Xenotech.png') !important;
+    }
+
+    .ps2-map.unknown {
+        background-color: var(--sq-black-alpha-50);
+    }
 
 /*
     Leaderboard Styles

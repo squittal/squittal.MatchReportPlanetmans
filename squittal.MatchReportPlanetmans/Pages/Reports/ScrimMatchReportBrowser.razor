@@ -103,7 +103,62 @@
                     </EditForm>
                 }
 
-                <table style="width: 100%; border-bottom: 1px solid var(--sq-gray);" class="table-responsive-sm table-striped-light">
+                <div class="report-browser-grid">
+
+                    @if (_storeScrimMatchList != null)
+                    {
+                            @foreach (var match in _storeScrimMatchList)
+                            {
+                                @*<div @onclick = "() => OnClickReportElement(match.ScrimMatchId)" class="grid-element sans-serif-font">*@
+                                <NavLink href="@($"/MatchReport/{match.ScrimMatchId}")" target="_blank" class="grid-element sans-serif-font">
+
+                                    <div style="width: 140px;">
+                                        @if (match.TeamOneFactionId <= 0)
+                                        {
+                                            <span class="mono-font" style="color: var(--sq-black); font-size: 1rem; font-weight: 500;">@match.TeamAliases[1]</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="@SqCssHelper.GetFactionClassFromId(match.TeamOneFactionId) mono-font" style="color: var(--sq-ps2-primary); font-size: 1rem; font-weight: 500;">@match.TeamAliases[1]</span>
+                                        }
+                                        <span>vs</span>
+                                        @if (match.TeamTwoFactionId <= 0)
+                                        {
+                                            <span class="mono-font" style="color: var(--sq-black); font-size: 1rem; font-weight: 500;">@match.TeamAliases[2]</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="@SqCssHelper.GetFactionClassFromId(match.TeamTwoFactionId) mono-font" style="color: var(--sq-ps2-primary);  font-size: 1rem; font-weight: 500;">@match.TeamAliases[2]</span>
+                                        }
+                                    </div>
+
+                                    <div style="width: 140px; height: 140px;">
+                                        <div class="ps2-map @GetFacilityImageClassFromFacilityId(match.FacilityId)" title="@GetMatchFacilityName(match.FacilityId, match.FacilityName)"></div>
+
+                                        <div class="map-overlay-text bottom @GetFacilityImageClassFromFacilityId(match.FacilityId)">@match.WorldName</div>
+                                        
+                                        <div class="map-overlay-text @GetFacilityImageClassFromFacilityId(match.FacilityId)" title="@GetMatchFacilityName(match.FacilityId, match.FacilityName)">@GetMatchFacilityName(match.FacilityId, match.FacilityName)</div>
+                                    </div>
+                                        
+                                    <div style="display: block; width: 140px;" title="@match.Title">@match.Title</div>
+
+                                    <div>
+                                        <span>@GetLocalizedDateString(match.StartTime)</span>
+                                        <span style="margin-right: 4px;">@GetLocalizedTimeString(match.StartTime)</span>
+                                    </div>
+                                    
+                                        @*<td>@match.RulesetName</td>
+                                        <td>@match.RoundCount</td>
+                                        <td>
+                                            <NavLink class="nav-link" target="_blank" href=@($"MatchReport/{match.ScrimMatchId}") style="padding: 4px 8px;">Open</NavLink>
+                                        </td>*@
+                                </NavLink>
+                            }
+                    }
+
+                </div>
+
+                @*<table style="width: 100%; border-bottom: 1px solid var(--sq-gray);" class="table-responsive-sm table-striped-light">
                     <thead>
                         <tr style="line-height: 1.2; font-size: 0.85rem; vertical-align: bottom; background-color: transparent; font-family: Roboto, 'Segoe UI', sans-serif; border-bottom: 1px solid var(--sq-gray);">
                             <th style="font-weight: 300;">Date</th>
@@ -162,7 +217,7 @@
                             }
                         </tbody>
                     }
-                </table>
+                </table>*@
 
                 @if (_isLoadingScrimMatchList)
                 {
@@ -484,6 +539,13 @@
         InvokeAsyncStateHasChanged();
     }
 
+    private void OnClickReportElement(string matchId)
+    {
+        //NavManager.NavigateTo($"/reports")
+
+
+    }
+
     #endregion Form Controls
 
     private bool UpdateUriParameters()
@@ -557,6 +619,50 @@
 
         return $"{dateTimeLocal.ToShortTimeString()}";
     }
+
+
+    #region Grid Stuff
+    private string GetFacilityImageClassFromFacilityId(int? facilityId)
+    {
+        switch(facilityId)
+        {
+            case null:
+                return "unknown";
+
+            case 302030:
+                return "Acan";
+
+            case 307010:
+                return "Chac";
+
+            case 305010:
+                return "Ghanan";
+
+            case 3430:
+                return "Peris";
+
+            case 3620:
+                return "Rashnu";
+
+            case 230:
+                return "Xenotech";
+
+            case 239000:
+                return "Pale";
+
+            default:
+                return "unknown";
+        }
+    }
+
+    private string GetMatchFacilityName(int? facilityId, string facilityName)
+    {
+        return facilityId != null ? facilityName : "No Facility";
+    }
+    #endregion Grid Stuff
+
+
+
 
     private void InvokeAsyncStateHasChanged()
     {
