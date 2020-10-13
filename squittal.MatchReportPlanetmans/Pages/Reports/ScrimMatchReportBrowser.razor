@@ -135,17 +135,24 @@
                                     <div style="width: 140px; height: 140px;">
                                         <div class="ps2-map @GetFacilityImageClassFromFacilityId(match.FacilityId)" title="@GetMatchFacilityName(match.FacilityId, match.FacilityName)"></div>
 
-                                        <div class="map-overlay-text bottom @GetFacilityImageClassFromFacilityId(match.FacilityId)">@match.WorldName</div>
-                                        
+                                        <div class="map-overlay-text bottom @GetFacilityImageClassFromFacilityId(match.FacilityId)" title="@GetLocalizedDateString(match.StartTime) @GetLocalizedTimeString(match.StartTime)">
+                                            <div style="font-size: 0.7rem;">@GetLocalizedTimeString(match.StartTime)</div>
+                                            <div style="">@GetLocalizedDateString(match.StartTime)</div>
+                                        </div>
+
+                                        @*<div class="map-overlay-text bottom @GetFacilityImageClassFromFacilityId(match.FacilityId)">@match.WorldName</div>*@
+
                                         <div class="map-overlay-text @GetFacilityImageClassFromFacilityId(match.FacilityId)" title="@GetMatchFacilityName(match.FacilityId, match.FacilityName)">@GetMatchFacilityName(match.FacilityId, match.FacilityName)</div>
                                     </div>
                                         
-                                    <div style="display: block; width: 140px;" title="@match.Title">@match.Title</div>
+                                    <div class="sub-text" title="@match.Title">@match.Title</div>
+                                    
+                                    @*<div style="display: block; width: 140px;" class="">@match.WorldName</div>*@
 
-                                    <div>
+                                    @*<div>
                                         <span>@GetLocalizedDateString(match.StartTime)</span>
                                         <span style="margin-right: 4px;">@GetLocalizedTimeString(match.StartTime)</span>
-                                    </div>
+                                    </div>*@
                                     
                                         @*<td>@match.RulesetName</td>
                                         <td>@match.RoundCount</td>

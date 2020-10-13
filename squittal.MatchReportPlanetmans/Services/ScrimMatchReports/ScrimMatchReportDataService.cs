@@ -19,7 +19,7 @@ namespace squittal.MatchReportPlanetmans.Services.ScrimMatchReports
         private readonly IDbContextHelper _dbContextHelper;
         private readonly ILogger<ScrimMatchReportDataService> _logger;
 
-        private readonly int _scrimMatchBrowserPageSize = 21; //15;
+        private readonly int _scrimMatchBrowserPageSize = 18; // 21; //15;
 
         public ScrimMatchReportDataService(IDbContextHelper dbContextHelper, ILogger<ScrimMatchReportDataService> logger)
         {

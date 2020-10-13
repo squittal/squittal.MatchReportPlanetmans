@@ -1074,13 +1074,18 @@ table.report-killfeed td {
     /*grid-auto-rows: 240px;*/
     grid-gap: 24px;
     /*grid-auto-flow: row dense;*/
-    grid-template-columns: repeat(auto-fill, 140px);
+    /*grid-template-columns: repeat(auto-fill, 140px);*/
+    grid-template-columns: repeat(auto-fill, 156px);
     grid-row-gap: 16px;
+    margin-left: 10px;
 }
 
     .report-browser-grid .grid-element {
-        width: 140px;
-        height: 200px;
+        /*width: 140px;*/
+        /*height: 200px;*/
+        width: 156px;
+        height: 190px;
+        padding: 2px 8px 4px 8px;
     }
 
     .report-browser-grid a.grid-element, .report-browser-grid a.grid-element:hover {
@@ -1088,32 +1093,52 @@ table.report-killfeed td {
         text-decoration: none;
     }
 
+        .report-browser-grid a.grid-element:hover {
+            color: inherit;
+            text-decoration: none;
+            box-shadow: 0px 0px 4px 0px var(--sq-light-blue-gray);
+        }
+
         .report-browser-grid .grid-element .map-overlay-text {
             display: block;
             position: relative;
             /*top: -140px;*/
-            top: -159px;
+            /*top: -159px; World Name */
+            top: -180px; /* Date & Time */
             padding-left: 8px;
             padding-top: 4px;
             color: white;
-            text-shadow: 1px 1px 1px black;
+            /*text-shadow: 1px 1px 1px black;*/
+            text-shadow: 0px 1px 2px black;
             font-weight: 600;
             width: 140px;
         }
 
             .report-browser-grid .grid-element .map-overlay-text.bottom {
                 /*top: -48px;*/
-                top: -26px;
+                /*top: -26px; World Name*/
+                top: -41px; /* Date & Time */
                 padding-left: 0px;
                 padding-right: 8px;
                 padding-top: 0px;
                 text-align: right;
                 font-weight: 400;
+                padding-bottom: 4px;
+
             }
 
         .report-browser-grid .grid-element .map-overlay-text.unknown {
             color: var(--sq-black);
             text-shadow: none;
+        }
+
+        .report-browser-grid .grid-element .sub-text {
+            width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 1px;
+            margin-top: 2px;
         }
 
 
